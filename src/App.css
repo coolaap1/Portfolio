@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Body{
+    width: 100%;
+    min-height: 100svh;
+    background-color: var(--Background-Blue);
+}
+.Hero{
+    width: 100%;
+    min-height: 260px;
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+.HeroInner{
+    width: min(900px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    text-align: left;
+}
+
+.HeroAvatar{
+    width: 132px;
+    height: 132px;
+    border-radius: 999px;
+    border: 3px solid var(--Background-Blue);
+    background-color: var(--Medium-Blue);
+    flex: 0 0 auto;
+}
+
+.HeroTextBox{
+    width: min(520px, 100%);
+    background-color: var(--Background-Blue);
+    border: 2px solid var(--Light-Blue);
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+
+.HeroTextBoxTitle{
+    font-family: var(--heading);
+    font-weight: 600;
+    color: var(--Selected-Blue);
+    margin-bottom: 6px;
+}
+
+.HeroTextBoxBody{
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+}

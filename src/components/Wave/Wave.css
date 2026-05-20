@@ -1,0 +1,15 @@
+.waveWrapper {
+  width: 100%;
+  height: fit-content;
+  line-height: 0;
+  background-color: var(--Background-Blue);
+  margin-top: -1px;
+  --wave-height: 100px;
+}
+
+.waveWrapperInner {
+  display: block;
+  width: 100%;
+  height: var(--wave-height);
+}
+
