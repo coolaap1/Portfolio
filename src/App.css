@@ -28,12 +28,23 @@
 }
 
 .HeroAvatar{
-    width: 132px;
-    height: 132px;
+    width: 250px;
+    height: 250px;
     border-radius: 999px;
-    border: 3px solid var(--Background-Blue);
+    border: 8px solid var(--Selected-Blue);
     background-color: var(--Medium-Blue);
     flex: 0 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeroAvatarImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .HeroTextBox{
@@ -54,4 +65,80 @@
 .HeroTextBoxBody{
     color: var(--Selected-Blue);
     opacity: 0.92;
+}
+
+.Skills{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px 16px 44px;
+    background-color: var(--Background-Blue);
+}
+
+.SkillsCube{
+    width: min(420px, 92vw);
+    border-radius: 16px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    gap: 14px;
+}
+
+.SkillsTitle{
+    font-family: var(--heading);
+    font-weight: 600;
+    color: var(--Selected-Blue);
+    text-transform: lowercase;
+}
+
+.SkillsPills{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.SkillPill{
+    padding: 8px 12px;
+    border-radius: 999px;
+    border-left: 3px solid var(--Dark-Blue);
+    border-right: 3px solid var(--Dark-Blue);
+    background-color: var(--Light-Blue);
+    color: black;
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.CVReference{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: var(--Background-Blue);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: black;
+}
+
+.CVReferencebutton{
+    background-color: var(--Button-Blue);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: var(--sans);
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
 }
