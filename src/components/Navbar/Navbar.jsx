@@ -1,13 +1,26 @@
 import './Navbar.css';
 
-
 export default function Navbar() {
-  return (<div class="navbar">
-      <div class="logo">Steff Dierckx</div>  
-      <div class="NavButton">Home</div>
-      <div class="NavButton">About me</div>
-      <div class="NavButton">CV</div>
-      <div class="NavButton">Projects</div>
-  </div>
+  return (
+    <header className="navbar" aria-label="Primary">
+      <a className="logo" href="#home" aria-label="Go to home">
+        Steff Dierckx
+      </a>
+
+      <nav className="NavButtonContainer" aria-label="Navigation">
+        <a className="NavButton" href="#home">
+          Home
+        </a>
+        <a className="NavButton" href="#about">
+          About me
+        </a>
+        <a className="NavButton" href="#projects">
+          Projects
+        </a>
+        <a className="NavButton" href="#internship">
+          Internship
+        </a>
+      </nav>
+    </header>
   )
 }

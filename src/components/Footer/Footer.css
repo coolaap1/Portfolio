@@ -1,0 +1,20 @@
+.Footer{
+	width: 100%;
+	background-color: var(--Dark-Blue);
+	padding: 16px;
+	display: flex;
+	justify-content: center;
+}
+
+.FooterInner{
+	width: min(900px, 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.FooterText{
+	color: white;
+	font-size: 14px;
+	opacity: 0.9;
+}

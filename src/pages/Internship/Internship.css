@@ -1,0 +1,87 @@
+.DownloadSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    border: 2px solid var(--Light-Blue);
+    border-radius: 12px;
+    background-color: var(--Background-Blue);
+    padding: 12px 14px;
+}
+
+.InternshipTextBlock{
+    width: 100%;
+    border: 2px solid var(--Light-Blue);
+    border-radius: 12px;
+    background-color: var(--Background-Blue);
+    padding: 12px 14px;
+    text-align: left;
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.InternshipTextTitle{
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--Selected-Blue);
+    margin-bottom: 6px;
+}
+
+.InternshipParagraph{
+    margin: 0;
+}
+
+.InternshipTextBlock .InternshipParagraph + .InternshipParagraph{
+    margin-top: 10px;
+}
+
+.InternshipList{
+    margin: 8px 0 0;
+    padding-left: 18px;
+}
+
+.InternshipList li{
+    margin: 6px 0;
+}
+
+.DownloadTitle{
+    width: 100%;
+    text-align: left;
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--Selected-Blue);
+}
+
+.DownloadRow{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.DownloadButton{
+    border: 0;
+    background-color: var(--Button-Blue);
+    color: white;
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-weight: 600;
+    height: 44px;
+    cursor: pointer;
+}
+
+.DownloadButtonFull{
+    width: 100%;
+}
+
+.DownloadButtonThird{
+    flex: 1 1 0;
+}
+
+@media (max-width: 520px) {
+    .DownloadRow{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,242 @@
+.ProjectsHeroBox{
+    width: min(700px, 100%);
+}
+
+.ProjectsCards{
+    width: min(1000px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ProjectCard{
+    border-radius: 16px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 12px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.ProjectCard:focus-visible{
+    border-color: var(--Selected-Blue);
+}
+
+.ProjectCardImage{
+    width: 100%;
+    height: 160px;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+}
+
+.ProjectCardDescription{
+    width: 100%;
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.ProjectTags{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: auto;
+}
+
+.ProjectTag{
+    padding: 6px 10px;
+    border-radius: 999px;
+    border-left: 3px solid var(--Dark-Blue);
+    border-right: 3px solid var(--Dark-Blue);
+    background-color: var(--Light-Blue);
+    color: black;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.ProjectModalOverlay{
+    position: fixed;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--Selected-Blue) 35%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 50;
+}
+
+.ProjectModal{
+    width: min(840px, 100%);
+    max-height: min(90svh, 820px);
+    overflow: auto;
+    border-radius: 16px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+    padding: 16px;
+    text-align: left;
+}
+
+.ProjectModalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.ProjectModalTitle{
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--Selected-Blue);
+    margin: 0;
+}
+
+.ProjectModalClose{
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 2px solid var(--Light-Blue);
+    background-color: transparent;
+    color: var(--Selected-Blue);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ProjectModalClose:hover{
+    background-color: var(--Light-Blue);
+    color: black;
+}
+
+.ProjectModalImage{
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+    margin-bottom: 12px;
+}
+
+.ProjectModalDescription{
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.ProjectModalDetails{
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 2px solid var(--Light-Blue);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ProjectModalDetail{
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+    .ProjectsCards{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .ProjectsCards{
+        grid-template-columns: 1fr;
+    }
+}
+
+.ProjectsCarousel{
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x mandatory;
+}
+
+.ProjectsCarouselButton{
+    flex: 0 0 auto;
+    width: 120px;
+    height: 78px;
+    border-radius: 12px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+    padding: 6px;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+
+.ProjectsCarouselButtonActive{
+    border-color: var(--Selected-Blue);
+}
+
+.ProjectsCarouselImage{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.ProjectDetailsImage{
+    width: 100%;
+    height: 160px;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid var(--Light-Blue);
+    background-color: var(--Background-Brown);
+}
+
+.ProjectDetailsDescription{
+    width: 100%;
+    text-align: left;
+    color: var(--Selected-Blue);
+    opacity: 0.92;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.ProjectDetailsPills{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ProjectDetailsPill{
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 16px;
+    border-left: 3px solid var(--Dark-Blue);
+    border-right: 3px solid var(--Dark-Blue);
+    background-color: var(--Light-Blue);
+    color: black;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.3;
+    white-space: normal;
+}
