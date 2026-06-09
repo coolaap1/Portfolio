@@ -25,7 +25,7 @@
 }
 
 .HeroInner{
-    width: min(900px, 100%);
+    width: min(1100px, 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@
 }
 
 .HeroTextBox{
-    width: min(520px, 100%);
+    width: min(800px, 100%);
     background-color: var(--Background-Blue);
     border: 2px solid var(--Light-Blue);
     border-radius: 14px;
@@ -91,6 +91,7 @@
     background-color: var(--Background-Brown);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 18px;
     gap: 14px;

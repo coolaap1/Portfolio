@@ -5,6 +5,8 @@ import Home from './pages/Home/Home'
 import CV from './pages/CV/CV'
 import Projects from './pages/Projects/Projects'
 import Internship from './pages/Internship/Internship'
+import Skills from './pages/Skills/Skills'
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <section id="about" className="PageSection" aria-label="About me">
           <CV />
         </section>
+
 
         <section id="projects" className="PageSection" aria-label="Projects">
           <Projects />

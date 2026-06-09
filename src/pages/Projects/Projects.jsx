@@ -11,74 +11,43 @@ export default function Projects() {
         id: 'duffalo',
         title: 'Web App Duffalo',
         description:
-          'A continuation project where we built a web app for indoor football club De Duffalos. I worked on the selection page, register season page, and import matches functionality.',
+          'in this project, we created a web application for a fictional football club called Duffalo. The app allows users to view the team roster, register for a season, and import match data from an external source.',
         tags: ['C#', 'ASP.NET', 'SQL', 'HTML/CSS/JS'],
         image: DuffaloLogo,
         imageAlt: 'Duffalo project',
         details: {
           course: 'Skills Integration Lab 2 (2nd semester)',
-          team: 'Daan, Nourredine, Iljas, Brent',
-          what: 'Web app to streamline club processes',
-          realised: 'How much work goes into a “simple” web app',
-          learned: 'Collaborating in a team and delivering a working product',
           contributions: 'Selection page, register season page, import matches functionality',
         },
       },
       {
-        id: 'portfolio',
-        title: 'Portfolio',
-        description: 'A clean one-page portfolio built with React + Vite and styled with custom CSS variables.',
-        tags: ['React', 'Vite', 'CSS'],
+        id: 'Trackle',
+        title: 'Trackle',
+        description: 'A project to implement live speech to text translation using a microphone and a self-trained ai model.',
+        tags: ['c#', 'Websocket','MongoDB'],
         image: HeroImage,
-        imageAlt: 'Portfolio project',
+        imageAlt: 'Trackle project',
         details: {
-          course: 'Personal project',
-          team: 'Solo',
-          what: 'Portfolio site to present my background, projects, and internship',
-          realised: 'A simple structure makes content easier to scan',
-          learned: 'Layout consistency and component organization',
-          contributions: 'Design and implementation',
+          course: 'Skills Integration Lab 3',
+          contributions: 'Backend , Websocket implementation, database design and integration',
         },
       },
       {
-        id: 'cv',
-        title: 'CV Page',
-        description: 'A dedicated CV section with a clear download button and a simple layout.',
-        tags: ['React', 'Vite', 'CSS'],
-        image: CvImage,
-        imageAlt: 'CV project',
+        id: 'Tournament-Bot',
+        title: 'Tournament Bot',
+        description: 'A ai agent to manage and automate TCG tournaments using ai and microsoft teams cards.',
+        tags: ['c#', 'openai API', 'Microsoft Teams'],
+        image: HeroImage,
+        imageAlt: 'Tournament Bot project',
         details: {
-          course: 'Personal project',
-          team: 'Solo',
-          what: 'A CV section with a PDF download and short intro',
-          realised: 'Less text + clear hierarchy reads better',
-          learned: 'Building a clear layout around content',
-          contributions: 'Layout and asset integration',
+          course: 'Skills Integration Lab 3',
+          contributions: 'api and bot development, database design and integration',
         },
       },
     ],
     []
   )
 
-  const [activeProjectId, setActiveProjectId] = useState(null)
-  const activeProject = projects.find((project) => project.id === activeProjectId) ?? null
-
-  useEffect(() => {
-    if (!activeProjectId) return
-
-    const onKeyDown = (event) => {
-      if (event.key === 'Escape') setActiveProjectId(null)
-    }
-
-    document.addEventListener('keydown', onKeyDown)
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    return () => {
-      document.removeEventListener('keydown', onKeyDown)
-      document.body.style.overflow = previousOverflow
-    }
-  }, [activeProjectId])
 
   return (
     <>
@@ -110,62 +79,20 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              <div className="ProjectModalDetails" aria-label="Extra information">
+              <p className="ProjectModalDetail">
+                <strong>Course:</strong> {project.details.course}
+              </p>
+            
+              <p className="ProjectModalDetail">
+                <strong>Contributions:</strong> {project.details.contributions}
+              </p>
+            </div>
             </article>
           ))}
         </div>
       </div>
 
-      {activeProject ? (
-        <div
-          className="ProjectModalOverlay"
-          role="presentation"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setActiveProjectId(null)
-          }}
-        >
-          <div className="ProjectModal" role="dialog" aria-modal="true" aria-label={`${activeProject.title} details`}>
-            <div className="ProjectModalHeader">
-              <p className="ProjectModalTitle">{activeProject.title}</p>
-              <button type="button" className="ProjectModalClose" onClick={() => setActiveProjectId(null)} aria-label="Close">
-                ×
-              </button>
-            </div>
-
-            <img className="ProjectModalImage" src={activeProject.image} alt={activeProject.imageAlt} />
-
-            <p className="ProjectModalDescription">{activeProject.description}</p>
-
-            <div className="ProjectTags" role="list" aria-label="Technologies used">
-              {activeProject.tags.map((tag) => (
-                <span key={tag} className="ProjectTag" role="listitem">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <div className="ProjectModalDetails" aria-label="Extra information">
-              <p className="ProjectModalDetail">
-                <strong>Course:</strong> {activeProject.details.course}
-              </p>
-              <p className="ProjectModalDetail">
-                <strong>Team:</strong> {activeProject.details.team}
-              </p>
-              <p className="ProjectModalDetail">
-                <strong>What:</strong> {activeProject.details.what}
-              </p>
-              <p className="ProjectModalDetail">
-                <strong>Realised:</strong> {activeProject.details.realised}
-              </p>
-              <p className="ProjectModalDetail">
-                <strong>Learned:</strong> {activeProject.details.learned}
-              </p>
-              <p className="ProjectModalDetail">
-                <strong>Contributions:</strong> {activeProject.details.contributions}
-              </p>
-            </div>
-          </div>
-        </div>
-      ) : null}
     </>
   )
 }
