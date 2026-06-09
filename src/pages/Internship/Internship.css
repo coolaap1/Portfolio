@@ -144,7 +144,6 @@
     padding-left: 12px;
     border-left: 4px solid var(--Light-Blue);
 
-    text-transform: lowercase;
 }
 
 .InternshipParagraph{
@@ -307,7 +306,6 @@
     padding-left: 12px;
     border-left: 4px solid var(--Light-Blue);
 
-    text-transform: lowercase;
 }
 .InternshipHeading2{
     font-family: var(--heading);
@@ -318,7 +316,6 @@
 
     padding-left: 12px;
 
-    text-transform: lowercase;
 }
 .InternshipParagraph{
     margin: 0;

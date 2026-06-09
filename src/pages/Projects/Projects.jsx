@@ -25,19 +25,19 @@ export default function Projects() {
         id: 'Trackle',
         title: 'Trackle',
         description: 'A project to implement live speech to text translation using a microphone and a self-trained ai model.',
-        tags: ['c#', 'Websocket','MongoDB'],
+        tags: ['C#', 'WebSocket','MongoDB'],
         image: trackle,
         imageAlt: 'Trackle project',
         details: {
           course: 'Skills Integration Lab 3',
-          contributions: 'Backend , Websocket implementation, database design and integration',
+          contributions: 'Backend , WebSocket implementation, database design and integration',
         },
       },
       {
         id: 'Tournament-Bot',
         title: 'Tournament Bot',
         description: 'A ai agent to manage and automate TCG tournaments using ai and microsoft teams cards.',
-        tags: ['c#', 'openai API', 'Microsoft Teams'],
+        tags: ['C#', 'OpenAI API', 'Microsoft Teams'],
         image: tournament,
         imageAlt: 'Tournament Bot project',
         details: {
@@ -62,13 +62,6 @@ export default function Projects() {
               role="listitem"
               aria-label={`${project.title} (open details)`}
               tabIndex={0}
-              onClick={() => setActiveProjectId(project.id)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  setActiveProjectId(project.id)
-                }
-              }}
             >
               <img className="ProjectCardImage" src={project.image} alt={project.imageAlt} />
               <p className="SkillsTitle">{project.title}</p>

@@ -17,8 +17,7 @@ export default function CV() {
               <p className="AboutHeading">A quick introduction</p>
 
               <p className="AboutParagraph">
-                Hello, my name is <strong>Steff Dierckx</strong>. I’m a web developer who enjoys building efficient,
-                reliable applications and understanding how systems work behind the scenes.
+                Hello, my name is <strong>Steff Dierckx</strong>.I’m an Application Development student with a strong focus on backend systems and database design.
             </p>
 
             <p className="AboutParagraph">
@@ -32,10 +31,13 @@ export default function CV() {
                 and I plan to continue with a <strong>Bachelor&apos;s degree in Cloud and Cyber Security</strong>. My goal is to
                 grow into a versatile IT professional who can help turn ideas into secure, well-structured solutions.
             </p>
+                        <p className="AboutParagraph">
+                If you want to contact me you can do email me at: <a href="mailto:steffkedierckx@gmail.com">steffkedierckx@gmail.com</a>
+            </p>
             </div>
 
             <a className="CVDownloadButton" href={CvPdf} download aria-label="Download my CV as PDF">
-              Download CV (PDF)
+              Download CV 
             </a>
           </div>
 

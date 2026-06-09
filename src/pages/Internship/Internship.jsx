@@ -49,13 +49,13 @@ export default function Internship() {
     <div className="InternshipDetailCard">
 
         <p className="InternshipHeading">
-            Main project · Poetscontrole
+            Main project · PoetsControle
         </p>
 
         <p className="InternshipParagraph">
             One of the most significant projects I completed was a cleaning
             inspection management application called
-            <strong> Poetscontrole</strong>.
+            <strong> PoetsControle</strong>.
         </p>
 
         <p className="InternshipParagraph">
@@ -116,7 +116,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-            projectplan
+            Projectplan
         </a>
 
         <a
@@ -125,7 +125,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-            realisatiedocument
+           Realisatiedocument
         </a>
 
         <a
@@ -133,7 +133,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-reflectie
+Reflectie
         </a>
 
     </div>
