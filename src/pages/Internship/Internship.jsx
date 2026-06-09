@@ -1,7 +1,7 @@
 import './Internship.css'
 import projectplan from '../../assets/ProjectPlan - Steff Dierckx.pdf'
-import realisatiedocument from '../../assets/RealisatieDocument - Steff Dierckx.pdf'
-import realsiatie from '../../assets/reflectie - Steff Dierckx.pdf'
+import realisatiedocument from '../../assets/Realisatiedocument - steff dierckx.zip'
+import reflectie from '../../assets/reflectie - Steff Dierckx.pdf'
 
 
 export default function Internship() {
@@ -129,11 +129,11 @@ export default function Internship() {
         </a>
 
         <a
-            href={realsiatie}
+            href={reflectie}
             download
             className="InternshipDocButton"
         >
-realsiatie
+reflectie
         </a>
 
     </div>
