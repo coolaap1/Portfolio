@@ -309,7 +309,17 @@
 
     text-transform: lowercase;
 }
+.InternshipHeading2{
+    font-family: var(--heading);
+    font-weight: 600;
+    color: var(--Selected-Blue);
 
+    margin: 0 0 10px;
+
+    padding-left: 12px;
+
+    text-transform: lowercase;
+}
 .InternshipParagraph{
     margin: 0;
 }

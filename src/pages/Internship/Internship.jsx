@@ -105,7 +105,7 @@ export default function Internship() {
 
             <div className="InternshipDocuments">
 
-    <p className="InternshipHeading">
+    <p className="InternshipHeading2">
         Documents
     </p>
 

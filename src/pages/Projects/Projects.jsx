@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import DuffaloLogo from '../../assets/DuffaloLogo.png'
 import HeroImage from '../../assets/hero.png'
-
+import trackle from '../../assets/trackle.png'
+import tournament from '../../assets/tournamentbot.png'
 import './Projects.css'
 
 export default function Projects() {
@@ -12,7 +13,7 @@ export default function Projects() {
         title: 'Web App Duffalo',
         description:
           'in this project, we created a web application for a fictional football club called Duffalo. The app allows users to view the team roster, register for a season, and import match data from an external source.',
-        tags: ['C#', 'ASP.NET', 'SQL', 'HTML/CSS/JS'],
+        tags: ['C#', 'SQL', 'HTML/CSS/JS'],
         image: DuffaloLogo,
         imageAlt: 'Duffalo project',
         details: {
@@ -25,7 +26,7 @@ export default function Projects() {
         title: 'Trackle',
         description: 'A project to implement live speech to text translation using a microphone and a self-trained ai model.',
         tags: ['c#', 'Websocket','MongoDB'],
-        image: HeroImage,
+        image: trackle,
         imageAlt: 'Trackle project',
         details: {
           course: 'Skills Integration Lab 3',
@@ -37,10 +38,10 @@ export default function Projects() {
         title: 'Tournament Bot',
         description: 'A ai agent to manage and automate TCG tournaments using ai and microsoft teams cards.',
         tags: ['c#', 'openai API', 'Microsoft Teams'],
-        image: HeroImage,
+        image: tournament,
         imageAlt: 'Tournament Bot project',
         details: {
-          course: 'Skills Integration Lab 3',
+          course: 'AI.Net',
           contributions: 'api and bot development, database design and integration',
         },
       },
