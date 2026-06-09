@@ -1,5 +1,5 @@
 import Wave from '../../components/Wave/Wave'
-import CvPdf from '../../assets/CV.pdf'
+import CvPdf from '../../assets/CV - Steff Dierckx.pdf'
 import Avatar from '../../assets/Avatar.png'
 import './CV.css'
 

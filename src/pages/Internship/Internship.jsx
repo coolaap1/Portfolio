@@ -1,4 +1,8 @@
 import './Internship.css'
+import projectplan from '../../assets/ProjectPlan - Steff Dierckx.pdf'
+import realisatiedocument from '../../assets/RealisatieDocument - Steff Dierckx.pdf'
+import realsiatie from '../../assets/reflectie - Steff Dierckx.pdf'
+
 
 export default function Internship() {
   return (
@@ -108,24 +112,28 @@ export default function Internship() {
     <div className="InternshipDocsGrid">
 
         <a
+            href={projectplan}
             download
             className="InternshipDocButton"
         >
-            Internship Report
+            projectplan
         </a>
 
         <a
+        
+            href={realisatiedocument}
             download
             className="InternshipDocButton"
         >
-            Reflection Report
+            realisatiedocument
         </a>
 
         <a
+            href={realsiatie}
             download
             className="InternshipDocButton"
         >
-            Source Files
+realsiatie
         </a>
 
     </div>

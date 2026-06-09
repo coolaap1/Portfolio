@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import DuffaloLogo from '../../assets/DuffaloLogo.png'
 import HeroImage from '../../assets/hero.png'
-import CvImage from '../../assets/CV.png'
+
 import './Projects.css'
 
 export default function Projects() {
