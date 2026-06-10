@@ -6,7 +6,7 @@ export default function Home() {
       <header className="Hero">
         <div className="HeroInner">
           <div className="HeroTextBox">
-            <p className="HeroTextBoxTitle">welcome:</p>
+            <p className="HeroTextBoxTitle">Welcome:</p>
             <p className="HeroTextBoxBody">
 Hi, I'm Steff Dierckx, a Bachelor student at Thomas More Geel focused on back-end development, databases, and software architecture.
 

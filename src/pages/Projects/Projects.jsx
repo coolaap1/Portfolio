@@ -1,6 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
+import {  useMemo } from 'react'
 import DuffaloLogo from '../../assets/DuffaloLogo.png'
-import HeroImage from '../../assets/hero.png'
 import trackle from '../../assets/trackle.png'
 import tournament from '../../assets/tournamentbot.png'
 import './Projects.css'
@@ -12,7 +11,7 @@ export default function Projects() {
         id: 'duffalo',
         title: 'Web App Duffalo',
         description:
-          'in this project, we created a web application for a fictional football club called Duffalo. The app allows users to view the team roster, register for a season, and import match data from an external source.',
+          'In this project, we created a web application for a fictional football club called Duffalo. The app allows users to view the team roster, register for a season, and import match data from an external source.',
         tags: ['C#', 'SQL', 'HTML/CSS/JS'],
         image: DuffaloLogo,
         imageAlt: 'Duffalo project',

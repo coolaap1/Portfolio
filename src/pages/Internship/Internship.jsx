@@ -1,6 +1,6 @@
 import './Internship.css'
 import projectplan from '../../assets/ProjectPlan - Steff Dierckx.pdf'
-import realisatiedocument from '../../assets/Realisatiedocument - steff dierckx.zip'
+import realisatiedocument from '../../assets/Realisatiedocument - steff dierckx.pdf'
 import reflectie from '../../assets/reflectie - Steff Dierckx.pdf'
 
 
