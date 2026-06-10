@@ -116,7 +116,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-            Projectplan
+            Projectplan (NL)
         </a>
 
         <a
@@ -125,7 +125,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-           Realisatiedocument
+           Realisationdocument (NL)
         </a>
 
         <a
@@ -133,7 +133,7 @@ export default function Internship() {
             download
             className="InternshipDocButton"
         >
-Reflectie
+Reflection (NL)
         </a>
 
     </div>
