@@ -1,44 +1,127 @@
-.ProjectsHeroBox{
-    width: min(700px, 100%);
+.ProjectsSection {
+    width: min(1040px, 100%);
+    --project-ink: var(--Selected-Blue);
+    --project-accent: var(--Border-Brown);
+    --project-surface: #fffaf1;
+    --project-surface-deep: #f5e4ca;
+    --project-border: #dfc5a5;
+    margin-inline: auto;
 }
 
-.ProjectsCards{
-    width: min(1000px, 100%);
+.ProjectsIntro {
+    width: min(650px, 100%);
+    margin-bottom: 32px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.Eyebrow,
+.ProjectCardKicker {
+    color: var(--project-accent);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ProjectsTitle {
+    margin: 4px 0 8px;
+    color: var(--project-ink);
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.04em;
+}
+
+.ProjectsSubtitle {
+    color: var(--project-ink);
+    font-size: 16px;
+    line-height: 1.55;
+    opacity: 0.78;
+}
+
+.ProjectsCards {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: 20px;
+    justify-items: stretch;
 }
 
-.ProjectCard{
-    border-radius: 16px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
+.ProjectCard {
+    min-height: 410px;
+    border: 1px solid var(--project-border);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--project-surface) 0%, var(--project-surface-deep) 100%);
+    box-shadow: 0 12px 30px rgba(100, 67, 45, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 18px;
-    gap: 12px;
+    gap: 18px;
+    padding: 12px;
     text-align: left;
     outline: none;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.ProjectCard:focus-visible{
-    border-color: var(--Selected-Blue);
+.ProjectCard:hover,
+.ProjectCard:focus-visible {
+    transform: translateY(-5px);
+    border-color: var(--project-accent);
+    box-shadow: 0 18px 34px rgba(100, 67, 45, 0.17);
 }
 
-.ProjectCardImage{
+.ProjectCard:focus-visible {
+    border-color: var(--project-ink);
+    outline: 3px solid color-mix(in srgb, var(--project-accent) 55%, transparent);
+    outline-offset: 3px;
+}
+
+.ProjectCardImageWrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.ProjectCardImage {
     width: 100%;
-    height: 160px;
+    height: 190px;
     display: block;
     object-fit: contain;
-    border-radius: 12px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
+    background: var(--Background-Blue);
+    transition: transform 220ms ease;
 }
 
-.ProjectCardDescription{
+.ProjectCard:hover .ProjectCardImage {
+    transform: scale(1.04);
+}
+
+.ProjectCardAction {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 999px;
+    padding: 5px 9px;
+    background: var(--project-accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.ProjectCardContent {
+    padding: 0 6px;
+    text-align: center;
+}
+
+.ProjectCardTitle {
+    margin: 3px 0 7px;
+    color: var(--project-ink);
+    font-size: 22px;
+    letter-spacing: -0.02em;
+}
+
+.ProjectCardDescription {
     width: 100%;
-    color: var(--Selected-Blue);
+    color: var(--project-ink);
     opacity: 0.92;
     font-size: 14px;
     line-height: 1.45;
@@ -51,15 +134,16 @@
     gap: 10px;
     justify-content: flex-start;
     margin-top: auto;
+    padding: 0 6px 6px;
+    justify-content: center;
 }
 
 .ProjectTag{
     padding: 6px 10px;
     border-radius: 999px;
-    border-left: 3px solid var(--Dark-Blue);
-    border-right: 3px solid var(--Dark-Blue);
-    background-color: var(--Light-Blue);
-    color: black;
+    background-color: var(--Background-Blue);
+    border: 1px solid var(--Light-Blue);
+    color: var(--project-ink);
     font-family: var(--sans);
     font-size: 14px;
     line-height: 1;
@@ -67,9 +151,15 @@
 }
 
 .ProjectModalOverlay{
+    --project-ink: var(--Selected-Blue);
+    --project-accent: var(--Border-Brown);
+    --project-surface: #fffaf1;
+    --project-surface-deep: #f5e4ca;
+    --project-border: #dfc5a5;
     position: fixed;
     inset: 0;
-    background-color: color-mix(in srgb, var(--Selected-Blue) 35%, transparent);
+    background-color: rgba(26, 62, 70, 0.68);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,10 +172,11 @@
     max-height: min(90svh, 820px);
     overflow: auto;
     border-radius: 16px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
-    padding: 16px;
-    text-align: left;
+    border: 1px solid var(--project-border);
+    background: linear-gradient(145deg, var(--project-surface) 0%, var(--project-surface-deep) 100%);
+    box-shadow: 0 24px 70px rgba(26, 62, 70, 0.28);
+    padding: 24px;
+    text-align: center;
 }
 
 .ProjectModalHeader{
@@ -94,12 +185,13 @@
     justify-content: space-between;
     gap: 12px;
     margin-bottom: 12px;
+    text-align: left;
 }
 
 .ProjectModalTitle{
     font-family: var(--heading);
     font-weight: 700;
-    color: var(--Selected-Blue);
+    color: var(--project-ink);
     margin: 0;
 }
 
@@ -107,32 +199,33 @@
     width: 40px;
     height: 40px;
     border-radius: 999px;
-    border: 2px solid var(--Light-Blue);
+    border: 2px solid var(--project-border);
     background-color: transparent;
-    color: var(--Selected-Blue);
+    color: var(--project-ink);
     font-size: 22px;
     line-height: 1;
     cursor: pointer;
 }
 
 .ProjectModalClose:hover{
-    background-color: var(--Light-Blue);
-    color: black;
+    background-color: var(--project-accent);
+    border-color: var(--project-accent);
+    color: white;
 }
 
 .ProjectModalImage{
     width: 100%;
-    height: 220px;
+    height: 240px;
     display: block;
     object-fit: contain;
     border-radius: 12px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
+    border: 2px solid var(--project-border);
+    background-color: var(--Background-Blue);
     margin-bottom: 12px;
 }
 
 .ProjectModalDescription{
-    color: var(--Selected-Blue);
+    color: var(--project-ink);
     opacity: 0.92;
     font-size: 14px;
     line-height: 1.5;
@@ -142,14 +235,15 @@
 .ProjectModalDetails{
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 2px solid var(--Light-Blue);
+    border-top: 2px solid var(--project-border);
     display: flex;
     flex-direction: column;
     gap: 8px;
+    text-align: left;
 }
 
 .ProjectModalDetail{
-    color: var(--Selected-Blue);
+    color: var(--project-ink);
     opacity: 0.92;
     font-size: 14px;
     line-height: 1.45;
@@ -157,7 +251,7 @@
 
 @media (max-width: 980px) {
     .ProjectsCards{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -165,77 +259,8 @@
     .ProjectsCards{
         grid-template-columns: 1fr;
     }
-}
 
-.ProjectsCarousel{
-    margin-top: 12px;
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scroll-snap-type: x mandatory;
-}
-
-.ProjectsCarouselButton{
-    flex: 0 0 auto;
-    width: 120px;
-    height: 78px;
-    border-radius: 12px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
-    padding: 6px;
-    cursor: pointer;
-    scroll-snap-align: center;
-}
-
-.ProjectsCarouselButtonActive{
-    border-color: var(--Selected-Blue);
-}
-
-.ProjectsCarouselImage{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-}
-
-.ProjectDetailsImage{
-    width: 100%;
-    height: 160px;
-    display: block;
-    object-fit: contain;
-    border-radius: 12px;
-    border: 2px solid var(--Light-Blue);
-    background-color: var(--Background-Brown);
-}
-
-.ProjectDetailsDescription{
-    width: 100%;
-    text-align: left;
-    color: var(--Selected-Blue);
-    opacity: 0.92;
-    font-size: 14px;
-    line-height: 1.45;
-}
-
-.ProjectDetailsPills{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.ProjectDetailsPill{
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 16px;
-    border-left: 3px solid var(--Dark-Blue);
-    border-right: 3px solid var(--Dark-Blue);
-    background-color: var(--Light-Blue);
-    color: black;
-    font-family: var(--sans);
-    font-size: 14px;
-    line-height: 1.3;
-    white-space: normal;
+    .ProjectModal {
+        padding: 18px;
+    }
 }

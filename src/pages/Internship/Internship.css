@@ -334,16 +334,6 @@
     margin: 8px 0;
 }
 
-.InternshipDocuments{
-    width: 100%;
-}
-
-.InternshipButtons{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 @media (max-width: 860px){
 
     .InternshipLayout{
@@ -380,38 +370,4 @@
 
 .InternshipDetailCard .InternshipHeading{
     margin-top: 0;
-}
-.InternshipDocsGrid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.InternshipDocButton{
-    width: 100%;
-    min-height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 12px;
-
-    border-radius: 999px;
-
-    background-color: var(--Button-Blue);
-    color: white;
-
-    text-decoration: none;
-
-    font-family: var(--sans);
-    font-weight: 600;
-
-    transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.InternshipDocButton:hover{
-    transform: translateY(-2px);
-    opacity: 0.95;
 }
