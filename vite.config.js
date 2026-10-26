@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['src\\assets\\Realisatiedocument - steff dierckx.zip'],
-  base: '/Portfolio/',
+  base: '/',
 })

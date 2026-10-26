@@ -5,7 +5,6 @@ import Home from './pages/Home/Home'
 import CV from './pages/CV/CV'
 import Projects from './pages/Projects/Projects'
 import Internship from './pages/Internship/Internship'
-import Skills from './pages/Skills/Skills'
 
 
 function App() {
