@@ -17,23 +17,23 @@ export default function CV() {
               <p className="AboutHeading">A quick introduction</p>
 
               <p className="AboutParagraph">
-                Hello, my name is <strong>Steff Dierckx</strong>.I’m an Application Development student with a strong focus on backend systems and database design.
-            </p>
+                Hello, my name is <strong>Steff Dierckx</strong>. I’m an Application Development graduate with a strong focus on backend systems and database design.
+              </p>
 
-            <p className="AboutParagraph">
-                I’m especially interested in <strong>back-end development</strong> and <strong>database management</strong>:
+              <p className="AboutParagraph">
+                I’m especially interested in taking projects from start to finish, with a focus on <strong>back-end development</strong> and <strong>database management</strong>:
                 working with data, designing structure, and building the logic that powers an app (APIs, services, and
                 databases).
-            </p>
+              </p>
 
-            <p className="AboutParagraph">
-                I’m completing my <strong>Bachelor&apos;s degree in Application Development</strong> at <strong>Thomas More Geel</strong>,
-                and I plan to continue with a <strong>Bachelor&apos;s degree in Cloud and Cyber Security</strong>. My goal is to
-                grow into a versatile IT professional who can help turn ideas into secure, well-structured solutions.
-            </p>
-                        <p className="AboutParagraph">
-                If you want to contact me you can do email me at: <a href="mailto:steffkedierckx@gmail.com">steffkedierckx@gmail.com</a>
-            </p>
+              <p className="AboutParagraph">
+                I completed my <strong>Bachelor&apos;s degree in Application Development</strong> at <strong>Thomas More Geel</strong>
+                and am now studying my second bachelor&apos;s degree in <strong>Cloud and Cyber Security (CCS)</strong>. My goal is to
+                grow into a versatile IT professional who can turn ideas into secure, well-structured solutions from start to finish.
+              </p>
+              <p className="AboutParagraph">
+                If you want to contact me, you can email me at: <a href="mailto:Steff.Dierckx@outlook.com">Steff.Dierckx@outlook.com</a>
+              </p>
             </div>
 
             <a className="CVDownloadButton" href={CvPdf} download aria-label="Download my CV as PDF">
