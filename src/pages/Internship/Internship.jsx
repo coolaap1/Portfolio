@@ -1,8 +1,4 @@
 import './Internship.css'
-import projectplan from '../../assets/ProjectPlan - Steff Dierckx.pdf'
-import realisatiedocument from '../../assets/Realisatiedocument - steff dierckx.pdf'
-import reflectie from '../../assets/reflectie - Steff Dierckx.pdf'
-
 
 export default function Internship() {
   return (
@@ -13,7 +9,7 @@ export default function Internship() {
         <div className="InternshipContent">
 
             <p className="SkillsTitle">
-                Internship · Ziekenhuis Geel
+                Application Development Internship · Ziekenhuis Geel
             </p>
 
             <div className="InternshipInfoGrid">
@@ -28,7 +24,7 @@ export default function Internship() {
                 <div className="InternshipInfoCard">
                     <p className="InternshipInfoLabel">Role</p>
                     <p className="InternshipInfoValue">
-                        Software Developer Intern
+                        Application Development Intern
                     </p>
                 </div>
 
@@ -102,43 +98,6 @@ export default function Internship() {
 </div>
 
             </div>
-
-            <div className="InternshipDocuments">
-
-    <p className="InternshipHeading2">
-        Documents
-    </p>
-
-    <div className="InternshipDocsGrid">
-
-        <a
-            href={projectplan}
-            download
-            className="InternshipDocButton"
-        >
-            Projectplan (NL)
-        </a>
-
-        <a
-        
-            href={realisatiedocument}
-            download
-            className="InternshipDocButton"
-        >
-           Realisationdocument (NL)
-        </a>
-
-        <a
-            href={reflectie}
-            download
-            className="InternshipDocButton"
-        >
-Reflection (NL)
-        </a>
-
-    </div>
-
-</div>
 
         </div>
 
