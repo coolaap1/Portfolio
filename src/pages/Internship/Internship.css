@@ -1,373 +1,110 @@
-.DownloadSection{
+.InternshipLayout {
+    width: min(900px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.InternshipContent {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
-    border: 2px solid var(--Light-Blue);
-    border-radius: 12px;
-    background-color: var(--Background-Blue);
-    padding: 12px 14px;
+    align-items: flex-start;
+    gap: 18px;
+    min-width: 0;
 }
 
-.InternshipTextBlock{
+.InternshipContent > .SkillsTitle {
     width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.InternshipInfoGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.InternshipInfoCard,
+.InternshipDetailCard {
+    min-width: 0;
     border: 2px solid var(--Light-Blue);
-    border-radius: 12px;
+    border-radius: 14px;
     background-color: var(--Background-Blue);
-    padding: 12px 14px;
-    text-align: left;
+}
+
+.InternshipInfoCard {
+    padding: 14px;
+}
+
+.InternshipInfoLabel {
+    font-size: 13px;
+    color: var(--Selected-Blue);
+    opacity: 0.7;
+}
+
+.InternshipInfoValue {
+    margin-top: 6px;
+    color: var(--Selected-Blue);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.InternshipTextBlock {
+    width: 100%;
     color: var(--Selected-Blue);
     opacity: 0.92;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.InternshipTextTitle{
-    font-family: var(--heading);
-    font-weight: 700;
-    color: var(--Selected-Blue);
-    margin-bottom: 6px;
-}
-
-.InternshipParagraph{
-    margin: 0;
-}
-
-.InternshipTextBlock .InternshipParagraph + .InternshipParagraph{
-    margin-top: 10px;
-}
-
-.InternshipList{
-    margin: 8px 0 0;
-    padding-left: 18px;
-}
-
-.InternshipList li{
-    margin: 6px 0;
-}
-
-.DownloadTitle{
-    width: 100%;
-    text-align: left;
-    font-family: var(--heading);
-    font-weight: 700;
-    color: var(--Selected-Blue);
-}
-
-.DownloadRow{
-    width: 100%;
-    display: flex;
-    gap: 10px;
-}
-
-.DownloadButton{
-    border: 0;
-    background-color: var(--Button-Blue);
-    color: white;
-    border-radius: 8px;
-    font-family: var(--sans);
-    font-weight: 600;
-    height: 44px;
-    cursor: pointer;
-}
-
-.DownloadButtonFull{
-    width: 100%;
-}
-
-.DownloadButtonThird{
-    flex: 1 1 0;
-}
-
-@media (max-width: 520px) {
-    .DownloadRow{
-        flex-direction: column;
-    }
-}
-.InternshipLayout{
-    width: min(1500px, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-}
-
-.InternshipContent{
-    width: min(900px, 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
-}
-
-.InternshipImage{
-    width: 300px;
-    height: 300px;
-    border-radius: 16px;
-    border: 8px solid var(--Selected-Blue);
-    background-color: var(--Medium-Blue);
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-.InternshipImageAsset{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 20px;
-}
-
-.InternshipTextBlock{
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 0;
-
-    color: var(--Selected-Blue);
     text-align: left;
     line-height: 1.6;
 }
 
-.InternshipHeading{
-    font-family: var(--heading);
-    font-weight: 600;
-    color: var(--Selected-Blue);
-
-    margin: 0 0 10px;
-
-    padding-left: 12px;
-    border-left: 4px solid var(--Light-Blue);
-
-}
-
-.InternshipParagraph{
-    margin: 0;
-}
-
-.InternshipParagraph + .InternshipParagraph{
-    margin-top: 10px;
-}
-
-.InternshipList{
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.InternshipButtons{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.InternshipButton{
-    min-height: 42px;
-    padding: 10px 14px;
-
-    border-radius: 999px;
-
-    background-color: var(--Button-Blue);
-    color: white;
-
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: var(--sans);
-    font-weight: 600;
-}
-
-@media (max-width: 860px){
-
-    .InternshipLayout{
-        flex-direction: column-reverse;
-    }
-
-    .InternshipImage{
-        width: 240px;
-        height: 240px;
-    }
-
-    .InternshipContent{
-        width: 100%;
-    }
-}
-.InternshipInfoGrid{
+.InternshipDetailsGrid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.InternshipInfoCard{
-    border: 2px solid var(--Light-Blue);
-    border-radius: 14px;
-    padding: 14px;
-    background-color: var(--Background-Blue);
-}
-
-.InternshipInfoLabel{
-    font-size: 13px;
-    opacity: .7;
-    color: var(--Selected-Blue);
-}
-
-.InternshipInfoValue{
-    margin-top: 6px;
-    font-weight: 600;
-    color: var(--Selected-Blue);
-}
-
-.InternshipLayout{
-    width: min(900px, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-}
-
-.InternshipContent{
-    width: min(900px, 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.InternshipImage{
-    width: 300px;
-    height: 300px;
-    border-radius: 16px;
-    border: 8px solid var(--Selected-Blue);
-    background-color: var(--Medium-Blue);
-    overflow: hidden;
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.InternshipImageAsset{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.InternshipInfoGrid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.InternshipInfoCard{
-    background-color: var(--Background-Blue);
-    border: 2px solid var(--Light-Blue);
-    border-radius: 14px;
-    padding: 14px;
-}
-
-.InternshipInfoLabel{
-    font-size: 13px;
-    color: var(--Selected-Blue);
-    opacity: .7;
-}
-
-.InternshipInfoValue{
-    margin-top: 6px;
-    color: var(--Selected-Blue);
-    font-weight: 600;
-}
-
-.InternshipTextBlock{
-    width: 100%;
-    color: var(--Selected-Blue);
-    opacity: .92;
-    text-align: left;
-    line-height: 1.6;
-}
-
-.InternshipHeading{
-    font-family: var(--heading);
-    font-weight: 600;
-    color: var(--Selected-Blue);
-
-    margin: 0 0 10px;
-
-    padding-left: 12px;
-    border-left: 4px solid var(--Light-Blue);
-
-}
-.InternshipHeading2{
-    font-family: var(--heading);
-    font-weight: 600;
-    color: var(--Selected-Blue);
-
-    margin: 0 0 10px;
-
-    padding-left: 12px;
-
-}
-.InternshipParagraph{
-    margin: 0;
-}
-
-.InternshipParagraph + .InternshipParagraph{
-    margin-top: 10px;
-}
-
-.InternshipList{
-    margin-top: 10px;
-    padding-left: 22px;
-}
-
-.InternshipList li{
-    margin: 8px 0;
-}
-
-@media (max-width: 860px){
-
-    .InternshipLayout{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .InternshipContent{
-        width: 100%;
-    }
-
-    .InternshipImage{
-        width: 240px;
-        height: 240px;
-    }
-
-    .InternshipInfoGrid{
-        grid-template-columns: 1fr;
-    }
-}
-.InternshipDetailsGrid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
-.InternshipDetailCard{
-    border: 2px solid var(--Light-Blue);
-    border-radius: 14px;
-    background-color: var(--Background-Blue);
+.InternshipDetailCard {
     padding: 16px;
 }
 
-.InternshipDetailCard .InternshipHeading{
-    margin-top: 0;
+.InternshipHeading {
+    margin: 0 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid var(--Light-Blue);
+    color: var(--Selected-Blue);
+    font-family: var(--heading);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.InternshipParagraph {
+    margin: 0;
+}
+
+.InternshipParagraph + .InternshipParagraph {
+    margin-top: 10px;
+}
+
+.InternshipList {
+    margin: 10px 0 0;
+    padding-left: 22px;
+}
+
+.InternshipList li {
+    margin: 8px 0;
+}
+
+@media (max-width: 720px) {
+    .InternshipInfoGrid,
+    .InternshipDetailsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .InternshipDetailCard {
+        padding: 14px;
+    }
 }

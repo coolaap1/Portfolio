@@ -27,8 +27,8 @@
 .NavButtonContainer{
   display: flex;
   gap: 10px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
 }
 .NavButton{
@@ -58,4 +58,21 @@
     background-color: var(--Light-Blue);
     color: black;
     border-color: var(--Light-Blue);
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .NavButtonContainer {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .NavButton {
+        flex: 1 1 auto;
+    }
 }

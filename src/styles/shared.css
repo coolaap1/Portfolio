@@ -84,6 +84,12 @@
     background-color: var(--Background-Blue);
 }
 
+@media (max-width: 640px) {
+    .Skills {
+        padding: 24px 12px 36px;
+    }
+}
+
 .SkillsCube{
     width: min(600px, 92vw);
     border-radius: 16px;
