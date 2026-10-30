@@ -1,5 +1,7 @@
 import './Navbar.css';
 
+const personalPath = `${import.meta.env.BASE_URL}personal`
+
 export default function Navbar() {
   return (
     <header className="navbar" aria-label="Primary">
@@ -21,7 +23,7 @@ export default function Navbar() {
         <a className="NavButton" href="#internship">
           Internship
         </a>
-        <a className="PersonalCornerLink" href="/personal">
+        <a className="PersonalCornerLink" href={personalPath}>
           Personal corner
         </a>
       </nav>
