@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import './PersonalPortfolio.css'
 
+const sitePath = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const pages = {
   tcgs: {
     label: "TCG's",
@@ -39,17 +41,17 @@ const pages = {
 function PersonalHeader({ currentPage }) {
   return (
     <header className="personal-nav">
-      <a className="personal-brand" href="/personal" aria-label="Go to personal home">
+      <a className="personal-brand" href={sitePath('personal')} aria-label="Go to personal home">
         <span className="personal-brand-mark">S</span>
         <span>Steff&apos;s corner</span>
       </a>
       <nav className="personal-nav-links" aria-label="Personal portfolio navigation">
-        <a className={currentPage === 'home' ? 'personal-nav-active' : ''} href="/personal">Home</a>
-        <a className={currentPage === 'tcgs' ? 'personal-nav-active' : ''} href="/personal/tcgs">TCG&apos;s</a>
-        <a className={currentPage === 'anime' ? 'personal-nav-active' : ''} href="/personal/anime">Anime</a>
-        <a className={currentPage === 'games' ? 'personal-nav-active' : ''} href="/personal/games">Games</a>
+        <a className={currentPage === 'home' ? 'personal-nav-active' : ''} href={sitePath('personal')}>Home</a>
+        <a className={currentPage === 'tcgs' ? 'personal-nav-active' : ''} href={sitePath('personal/tcgs')}>TCG&apos;s</a>
+        <a className={currentPage === 'anime' ? 'personal-nav-active' : ''} href={sitePath('personal/anime')}>Anime</a>
+        <a className={currentPage === 'games' ? 'personal-nav-active' : ''} href={sitePath('personal/games')}>Games</a>
       </nav>
-      <a className="personal-switch-link" href="/">Professional site ↗</a>
+      <a className="personal-switch-link" href={sitePath('')}>Professional site ↗</a>
     </header>
   )
 }
@@ -92,7 +94,7 @@ function PersonalHome() {
         </div>
         <div className="personal-interest-grid">
           {Object.entries(pages).map(([id, page]) => (
-            <a className={`personal-interest-card personal-interest-${page.color}`} href={`/personal/${id}`} key={id}>
+            <a className={`personal-interest-card personal-interest-${page.color}`} href={sitePath(`personal/${id}`)} key={id}>
               <span className="personal-interest-icon">{page.icon}</span>
               <span className="personal-card-arrow">↗</span>
               <h3>{page.label}</h3>

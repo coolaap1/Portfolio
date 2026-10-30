@@ -6,6 +6,6 @@ import PersonalPortfolio from './personal/PersonalPortfolio.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {window.location.pathname.startsWith('/personal') ? <PersonalPortfolio /> : <App />}
+    {window.location.pathname.split('/').includes('personal') ? <PersonalPortfolio /> : <App />}
   </StrictMode>,
 )

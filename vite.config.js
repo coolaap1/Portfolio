@@ -5,5 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['src\\assets\\Realisatiedocument - steff dierckx.zip'],
-  base: '/',
+  // Relative asset URLs work for both the repository Pages URL and the custom domain.
+  base: './',
 })
