@@ -5,74 +5,90 @@
 }
 .navbar {
     width: 100%;
-    min-height: 80px;
-    background-color: var(--Dark-Blue);
+    min-height: 78px;
+    background-color: var(--Background-Blue);
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
-    gap: 12px;
+    padding: 16px max(24px, calc((100% - 1180px) / 2));
+    gap: 24px;
+    border-bottom: 1px solid var(--Light-Blue);
 }
 .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--Selected-Blue);
+    font-size: 16px;
+    font-weight: 700;
     text-decoration: none;
     line-height: 1;
 }
+.LogoMark {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--Selected-Blue);
+    color: var(--Background-Blue);
+    font-size: 18px;
+}
 .NavButtonContainer{
   display: flex;
-  gap: 10px;
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
 }
 .NavButton{
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
-    min-height: 44px;
-    border-radius: 999px;
-    border: 2px solid var(--Light-Blue);
-    background-color: transparent;
+    color: var(--Selected-Blue);
     text-decoration: none;
-    color: white;
-    font-weight: 600;
-    line-height: 1;
-    transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+    font-size: 14px;
+    transition: color 120ms ease;
 }
 
 .NavButton:hover{
-    background-color: var(--Light-Blue);
-    color: black;
-    border-color: var(--Light-Blue);
+    color: var(--Dark-Blue);
 }
 
 .NavButtonActive{
+    font-weight: 700;
+}
+
+.PersonalCornerLink {
+    padding: 9px 14px;
+    border: 1px solid var(--Light-Blue);
+    border-radius: 999px;
+    color: var(--Selected-Blue);
+    font-size: 12px;
+    text-decoration: none;
+    transition: background-color 120ms ease, color 120ms ease;
+}
+
+.PersonalCornerLink:hover {
     background-color: var(--Light-Blue);
-    color: black;
-    border-color: var(--Light-Blue);
+    color: var(--Selected-Blue);
 }
 
 @media (max-width: 640px) {
     .navbar {
         align-items: flex-start;
         flex-direction: column;
-        padding: 12px;
+        padding: 16px;
     }
 
     .NavButtonContainer {
         width: 100%;
         justify-content: flex-start;
+        gap: 16px;
     }
 
     .NavButton {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
     }
 }

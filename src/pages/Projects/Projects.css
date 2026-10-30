@@ -224,7 +224,8 @@
     margin-bottom: 12px;
 }
 
-.ProjectModalDescription{
+.ProjectModalDescription,
+.ProjectModalDetailedDescription{
     color: var(--project-ink);
     opacity: 0.92;
     font-size: 14px;
@@ -262,5 +263,26 @@
 
     .ProjectModal {
         padding: 18px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ProjectsSection,
+    .ProjectModalOverlay {
+        --project-ink: #f3f4f6;
+        --project-accent: #d7a47f;
+        --project-surface: #1f2028;
+        --project-surface-deep: #2e303a;
+        --project-border: #596273;
+    }
+
+    .ProjectCardImage,
+    .ProjectModalImage,
+    .ProjectTag {
+        background-color: #16171d;
+    }
+
+    .ProjectTag {
+        border-color: #596273;
     }
 }

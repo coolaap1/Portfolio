@@ -4,11 +4,12 @@ export default function Navbar() {
   return (
     <header className="navbar" aria-label="Primary">
       <a className="logo" href="#home" aria-label="Go to home">
-        Steff Dierckx
+        <span className="LogoMark">S</span>
+        <span>Steff Dierckx</span>
       </a>
 
       <nav className="NavButtonContainer" aria-label="Navigation">
-        <a className="NavButton" href="#home">
+        <a className="NavButton NavButtonActive" href="#home">
           Home
         </a>
         <a className="NavButton" href="#about">
@@ -19,6 +20,9 @@ export default function Navbar() {
         </a>
         <a className="NavButton" href="#internship">
           Internship
+        </a>
+        <a className="PersonalCornerLink" href="/personal">
+          Personal corner
         </a>
       </nav>
     </header>
