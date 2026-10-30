@@ -1,6 +1,7 @@
 import './Navbar.css';
 
-const personalPath = `${import.meta.env.BASE_URL}personal`
+const siteBase = window.location.hostname.endsWith('.github.io') ? '/Portfolio/' : '/'
+const personalPath = `${siteBase}personal`
 
 export default function Navbar() {
   return (

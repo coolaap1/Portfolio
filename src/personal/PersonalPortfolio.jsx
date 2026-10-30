@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import './PersonalPortfolio.css'
 
-const sitePath = (path) => `${import.meta.env.BASE_URL}${path}`
+const siteBase = window.location.hostname.endsWith('.github.io') ? '/Portfolio/' : '/'
+const sitePath = (path) => `${siteBase}${path}`
 
 const pages = {
   tcgs: {
