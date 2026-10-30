@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.personal-site {
+  --personal-ink: #24212b;
+  --personal-muted: #716b7d;
+  --personal-paper: #fbf8f2;
+  --personal-panel: #fffdfa;
+  --personal-lilac: #e8defc;
+  --personal-pink: #ffb7c9;
+  --personal-blue: #b7d9f6;
+  --personal-yellow: #f9d879;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--personal-ink);
+  background: var(--personal-paper);
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+
+.personal-site *, .personal-site *::before, .personal-site *::after { box-sizing: border-box; }
+.personal-site a { color: inherit; }
+.personal-site h1, .personal-site h2, .personal-site h3 { color: var(--personal-ink); }
+.personal-nav {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.personal-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; }
+.personal-brand-mark {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--personal-ink); color: var(--personal-paper); font-size: 18px;
+}
+.personal-nav-links { display: flex; gap: 26px; font-size: 14px; }
+.personal-nav-links a, .personal-switch-link { text-decoration: none; }
+.personal-nav-links a { color: var(--personal-muted); transition: color .2s ease; }
+.personal-nav-links a:hover, .personal-switch-link:hover { color: #d34b73; }
+.personal-nav-active { color: var(--personal-ink) !important; font-weight: 700; }
+.personal-switch-link { padding: 9px 14px; border: 1px solid #d6cedd; border-radius: 99px; font-size: 12px; }
+.personal-hero {
+  width: min(1180px, calc(100% - 48px)); min-height: 570px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px;
+}
+.personal-kicker { margin: 0 0 18px; color: #d34b73; font: 500 12px/1 'DM Mono', monospace; letter-spacing: .12em; text-transform: uppercase; }
+.personal-hero h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .96; letter-spacing: -.07em; font-weight: 700; }
+.personal-hero h1 span { color: #8d78ba; }
+.personal-hero-text { max-width: 470px; margin: 30px 0; color: var(--personal-muted); font-size: 17px; line-height: 1.65; }
+.personal-primary-button { display: inline-flex; gap: 18px; align-items: center; padding: 14px 18px; border-radius: 5px; background: var(--personal-ink); color: white; text-decoration: none; font-weight: 600; }
+.personal-primary-button span { color: var(--personal-yellow); font-size: 20px; }
+.personal-hero-art { position: relative; min-height: 450px; }
+.personal-orbit { position: absolute; border: 1px solid #d8cde6; border-radius: 50%; transform: rotate(-25deg); }
+.personal-orbit-one { width: 360px; height: 170px; top: 135px; left: 18%; }
+.personal-orbit-two { width: 450px; height: 240px; top: 100px; left: 8%; transform: rotate(45deg); }
+.personal-sun { position: absolute; top: 140px; left: 40%; display: grid; place-items: center; width: 150px; height: 150px; border-radius: 50%; background: var(--personal-lilac); color: #8970b8; font-size: 62px; box-shadow: 12px 14px 0 #f4e3e7; }
+.personal-sticker { position: absolute; display: grid; place-items: center; width: 58px; height: 58px; border: 2px solid var(--personal-ink); box-shadow: 5px 5px 0 var(--personal-ink); font-size: 25px; font-weight: 700; }
+.personal-sticker-card { top: 70px; left: 20%; background: var(--personal-pink); transform: rotate(-15deg); }
+.personal-sticker-star { top: 85px; right: 12%; background: var(--personal-yellow); border-radius: 50%; transform: rotate(12deg); }
+.personal-sticker-game { right: 17%; bottom: 86px; background: var(--personal-blue); transform: rotate(15deg); }
+.personal-art-caption { position: absolute; bottom: 43px; left: 25%; font: 12px/1.5 'DM Mono', monospace; color: var(--personal-muted); transform: rotate(-5deg); }
+.personal-art-caption strong { color: var(--personal-ink); }
+.personal-section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 100px 0 115px; }
+.personal-section-heading { max-width: 620px; }
+.personal-section-heading h2 { margin: 0 0 14px; font-size: clamp(34px, 5vw, 56px); letter-spacing: -.06em; }
+.personal-section-heading h2 span { color: #d34b73; font-size: .7em; }
+.personal-section-heading > p:last-child { color: var(--personal-muted); line-height: 1.6; }
+.personal-interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+.personal-interest-card { position: relative; min-height: 240px; padding: 28px; border: 1px solid #ded5e0; border-radius: 6px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.personal-interest-card:hover { transform: translateY(-6px); box-shadow: 8px 8px 0 var(--personal-lilac); }
+.personal-interest-card:nth-child(2) { background: #f1f5fb; }
+.personal-interest-card:nth-child(3) { background: #fff7da; }
+.personal-interest-icon { font-size: 35px; }
+.personal-card-arrow { position: absolute; right: 27px; top: 28px; font-size: 21px; }
+.personal-interest-card h3 { margin: 28px 0 9px; font-size: 24px; }
+.personal-interest-card p { margin: 0; color: var(--personal-muted); font-size: 14px; line-height: 1.55; }
+.personal-collection-section { display: grid; gap: 16px; width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.personal-collection { position: relative; min-height: 260px; padding: 34px 40px; display: grid; grid-template-columns: 180px minmax(0, 610px) 1fr; gap: 30px; align-items: center; overflow: hidden; border-radius: 7px; }
+.personal-collection-pink { background: var(--personal-pink); }
+.personal-collection-blue { background: var(--personal-blue); }
+.personal-collection-yellow { background: var(--personal-yellow); }
+.personal-collection-number { align-self: start; font: 12px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
+.personal-collection h2 { margin: 0 0 14px; font-size: clamp(30px, 4vw, 48px); letter-spacing: -.06em; }
+.personal-collection p { margin: 0; max-width: 600px; line-height: 1.6; }
+.personal-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.personal-tags span { padding: 6px 10px; border: 1px solid rgba(36,33,43,.35); border-radius: 99px; font: 11px 'DM Mono', monospace; }
+.personal-collection-symbol { justify-self: end; padding-right: 7%; color: rgba(36,33,43,.25); font-size: 150px; line-height: 1; transform: rotate(15deg); }
+.personal-quote-section { width: min(900px, calc(100% - 48px)); margin: 0 auto; padding: 150px 0; text-align: center; }
+.personal-quote-section blockquote { margin: 0; font-size: clamp(28px, 5vw, 52px); line-height: 1.08; letter-spacing: -.06em; }
+.personal-quote-note { margin: 25px 0 0; color: var(--personal-muted); font: 12px 'DM Mono', monospace; }
+.personal-footer { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 26px 0 34px; border-top: 1px solid #ded5e0; display: flex; justify-content: space-between; color: var(--personal-muted); font: 11px 'DM Mono', monospace; }
+.personal-footer a { text-decoration: none; color: var(--personal-ink); }
+.personal-page-main { background: var(--personal-paper); }
+.personal-page-hero {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 48px 24px;
+}
+.personal-page-hero-pink { background: var(--personal-pink); }
+.personal-page-hero-blue { background: var(--personal-blue); }
+.personal-page-hero-yellow { background: var(--personal-yellow); }
+.personal-page-hero-inner {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+.personal-page-hero .personal-kicker { color: var(--personal-ink); }
+.personal-page-hero h1 {
+  margin: 0 0 15px;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1;
+  letter-spacing: -.07em;
+}
+.personal-page-hero-inner > div > p:last-child {
+  max-width: 650px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.personal-page-icon {
+  display: grid;
+  place-items: center;
+  width: 122px;
+  height: 122px;
+  flex: 0 0 auto;
+  border: 2px solid var(--personal-ink);
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  box-shadow: 8px 8px 0 rgba(36,33,43,.85);
+  font-size: 55px;
+}
+.personal-content-section {
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 65px 0 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 28px;
+  align-items: start;
+}
+.personal-content-column { display: grid; gap: 18px; }
+.personal-content-panel {
+  padding: 28px 30px;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: #fffdfa;
+}
+.personal-content-panel .personal-kicker { margin-bottom: 10px; }
+.personal-content-panel h2 { margin: 0 0 10px; font-size: 29px; letter-spacing: -.04em; }
+.personal-content-panel > p:last-child { color: var(--personal-muted); line-height: 1.7; }
+.personal-page-aside {
+  padding: 27px 24px;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: var(--personal-lilac);
+}
+.personal-aside-icon { display: block; margin-bottom: 23px; font-size: 40px; }
+.personal-page-aside h2 { margin: 0 0 10px; font-size: 23px; }
+.personal-page-aside p { margin: 0; color: var(--personal-muted); line-height: 1.6; font-size: 14px; }
+.personal-content-section .personal-tags { padding: 5px 4px; }
+.personal-tcg-section {
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 65px 0 100px;
+  display: grid;
+  gap: 24px;
+}
+.personal-tcg-panel {
+  padding: 34px 38px;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+}
+.personal-tcg-riftbound { background: #fff1f4; }
+.personal-tcg-magic { background: #f1f5fb; }
+.personal-tcg-riftbound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.personal-tcg-riftbound .personal-tcg-panel-heading { margin: 0 auto; }
+.personal-tcg-riftbound .personal-deck-list { width: min(760px, 100%); }
+.personal-tcg-riftbound .personal-resource-link { align-self: center; }
+.personal-tcg-magic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.personal-tcg-magic .personal-tcg-panel-heading { margin: 0 auto; }
+.personal-tcg-magic .personal-magic-links { width: min(760px, 100%); }
+.personal-tcg-magic .personal-resource-link { align-self: center; }
+.personal-tcg-panel-heading { max-width: 720px; }
+.personal-tcg-panel-heading .personal-kicker { margin-bottom: 10px; }
+.personal-tcg-panel h2 { margin: 0 0 13px; font-size: clamp(29px, 4vw, 43px); letter-spacing: -.06em; }
+.personal-tcg-panel-heading > p:last-child { color: var(--personal-muted); line-height: 1.7; }
+.personal-deck-list, .personal-magic-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+.personal-deck-card, .personal-link-placeholder {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid rgba(36,33,43,.2);
+  border-radius: 9px;
+  background: var(--personal-panel);
+}
+.personal-deck-card { position: relative; min-height: 190px; overflow: hidden; }
+.personal-deck-card::after {
+  position: absolute;
+  right: -25px;
+  bottom: -48px;
+  color: rgba(211,75,115,.1);
+  font-size: 150px;
+  line-height: 1;
+}
+.personal-deck-azir::after { content: '☀'; }
+.personal-deck-ziggs::after { content: '✹'; }
+.personal-deck-icon, .personal-link-placeholder > span { flex: 0 0 auto; font-size: 30px; color: #d34b73; }
+.personal-deck-number { margin: 0 0 5px !important; color: #d34b73 !important; font: 11px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+.personal-deck-card h3, .personal-link-placeholder h3 { margin: 0 0 6px; font-size: 19px; }
+.personal-deck-card p, .personal-link-placeholder p { margin: 0; color: var(--personal-muted); font-size: 13px; line-height: 1.5; }
+.personal-coming-soon {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--personal-muted) !important;
+  font: 11px 'DM Mono', monospace;
+  text-transform: uppercase;
+}
+.personal-deck-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 15px;
+  color: #a9365d;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.personal-deck-link span { color: #d34b73; }
+.personal-resource-link {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background: var(--personal-ink);
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.personal-resource-link span, .personal-link-placeholder b { color: #d34b73; }
+.personal-link-placeholder-clickable { text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.personal-link-placeholder-clickable:hover { transform: translateY(-3px); box-shadow: 5px 5px 0 var(--personal-lilac); }
+.personal-tcg-magic .personal-link-placeholder > span { color: #6f86b7; }
+.personal-anime-section {
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 65px 0 100px;
+  display: grid;
+  gap: 48px;
+}
+.personal-anime-collection {
+  padding: 34px 38px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .75fr);
+  gap: 38px;
+  align-items: start;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: #eaf3fc;
+}
+.personal-anime-collection > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 4px;
+}
+.personal-anime-collection h2, .personal-anime-heading h2 {
+  margin: 0;
+  font-size: clamp(29px, 4vw, 43px);
+  letter-spacing: -.06em;
+}
+.personal-anime-collection > div:first-child > p:last-child {
+  max-width: 580px;
+  margin: 0;
+  color: var(--personal-muted);
+  line-height: 1.7;
+}
+.personal-anime-collection-action {
+  min-height: 175px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid rgba(36,33,43,.2);
+  border-radius: 9px;
+  background: var(--personal-panel);
+}
+.personal-anime-collection-icon { flex: 0 0 auto; color: #6f86b7; font-size: 32px; }
+.personal-anime-collection-action h3 { margin: 0 0 6px; font-size: 19px; }
+.personal-anime-collection-action p { margin: 0; color: var(--personal-muted); font-size: 13px; line-height: 1.5; }
+.personal-collection-links {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-top: 14px;
+}
+.personal-collection-links a {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 45%;
+  padding: 7px 10px;
+  border: 1px solid #9aaed0;
+  border-radius: 999px;
+  color: #536b9a;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease;
+}
+.personal-collection-links a:hover { background: #eaf3fc; color: #536b9a; }
+.personal-collection-links span { color: #6f86b7; }
+.personal-anime-favorites { display: grid; gap: 24px; }
+.personal-anime-heading .personal-kicker { margin-bottom: 10px; }
+.personal-favorite-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.personal-favorite-card {
+  min-height: 275px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: var(--personal-panel);
+}
+.personal-cover-placeholder {
+  min-height: 225px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9aaed0;
+  border-radius: 8px;
+  background: #eaf3fc;
+}
+.personal-cover-placeholder img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+}
+.personal-favorite-content { align-self: center; }
+.personal-favorite-card h3 { margin: 0 0 10px; font-size: 25px; letter-spacing: -.04em; }
+.personal-favorite-card > p:not(.personal-deck-number) { margin: 0; color: var(--personal-muted); line-height: 1.65; }
+.personal-favorite-note { display: block; margin-top: 21px; color: #6f86b7; font: 11px 'DM Mono', monospace; text-transform: uppercase; }
+.personal-games-section {
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 65px 0 100px;
+  text-align: center;
+}
+.personal-games-heading { margin-bottom: 28px; }
+.personal-games-heading h2 {
+  margin: 0;
+  color: var(--personal-ink);
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -.06em;
+}
+.personal-game-list { display: grid; gap: 28px; }
+.personal-game-card {
+  min-height: 275px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: var(--personal-panel);
+}
+.personal-game-card { text-align: center; }
+.personal-game-cover {
+  min-height: 225px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c3a64b;
+  border-radius: 8px;
+  background: #fff7da;
+  color: #a58320;
+  font-size: 55px;
+}
+.personal-game-cover img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+}
+.personal-game-content { align-self: center; }
+.personal-game-content h3 { margin: 0 0 10px; font-size: 29px; letter-spacing: -.04em; }
+.personal-game-content > p:last-child { margin: 0; color: var(--personal-muted); line-height: 1.65; }
+.personal-games-collection {
+  margin-top: 48px;
+  padding: 30px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border: 2px solid #d6cedd;
+  border-radius: 14px;
+  background: #fff7da;
+  text-align: center;
+}
+.personal-games-collection > div { flex: 1 1 auto; }
+.personal-games-collection h2 { margin: 0 0 9px; font-size: 31px; letter-spacing: -.05em; }
+.personal-games-collection p:last-child { margin: 0; color: var(--personal-muted); line-height: 1.6; }
+.personal-games-collection .personal-resource-link { flex: 0 0 auto; margin-top: 0; }
+@media (prefers-color-scheme: dark) {
+  .personal-site {
+    --personal-ink: #24212b;
+    --personal-muted: #5e5869;
+    --personal-paper: #fbf8f2;
+    --personal-panel: #fffdfa;
+  }
+}
+@media (max-width: 760px) {
+  .personal-nav, .personal-hero, .personal-section, .personal-collection-section, .personal-footer { width: min(100% - 32px, 600px); }
+  .personal-nav { padding: 16px 0; align-items: flex-start; flex-wrap: wrap; }
+  .personal-nav-links { order: 3; width: 100%; gap: 16px; overflow-x: auto; }
+  .personal-switch-link { margin-left: auto; }
+  .personal-hero { display: block; min-height: auto; padding: 75px 0 90px; }
+  .personal-hero-art { min-height: 330px; margin-top: 30px; transform: scale(.85); transform-origin: top center; }
+  .personal-interest-grid { grid-template-columns: 1fr; }
+  .personal-interest-card { min-height: 190px; }
+  .personal-collection { grid-template-columns: 1fr; padding: 28px; gap: 18px; }
+  .personal-collection-symbol { position: absolute; right: 0; bottom: -30px; font-size: 120px; }
+  .personal-footer { gap: 18px; flex-direction: column; }
+  .personal-page-hero { padding: 44px 16px; }
+  .personal-page-hero-inner { align-items: flex-start; flex-direction: column; gap: 25px; }
+  .personal-page-icon { width: 82px; height: 82px; font-size: 35px; }
+  .personal-content-section { width: min(100% - 32px, 600px); padding: 42px 0 70px; grid-template-columns: 1fr; }
+  .personal-tcg-section { width: min(100% - 32px, 600px); padding: 42px 0 70px; }
+  .personal-tcg-panel { padding: 27px 22px; }
+  .personal-deck-list, .personal-magic-links { grid-template-columns: 1fr; }
+  .personal-anime-section { width: min(100% - 32px, 600px); padding: 42px 0 70px; }
+  .personal-anime-collection { grid-template-columns: 1fr; padding: 27px 22px; gap: 24px; }
+  .personal-favorite-grid { grid-template-columns: 1fr; }
+  .personal-favorite-card { grid-template-columns: 105px minmax(0, 1fr); gap: 16px; }
+  .personal-cover-placeholder { min-height: 185px; }
+  .personal-games-section { width: min(100% - 32px, 600px); padding: 42px 0 70px; }
+  .personal-game-card { grid-template-columns: 105px minmax(0, 1fr); gap: 16px; }
+  .personal-game-cover { min-height: 185px; }
+  .personal-games-collection { align-items: center; flex-direction: column; padding: 27px 22px; }
+}
