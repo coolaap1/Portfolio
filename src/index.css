@@ -59,6 +59,16 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    --Dark-Blue: #245c6b;
+    --Medium-Blue: #4a8fa0;
+    --Light-Blue: #79b8c5;
+    --Background-Blue: #17272b;
+    --Selected-Blue: #d7f0f3;
+    --Button-Blue: #56aabd;
+    --Border-Brown: #a97a5d;
+    --Background-Brown: #2b241d;
+    --Section-Brown: #3a3025;
   }
 
   #social .button-icon {
