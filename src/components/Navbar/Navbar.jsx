@@ -24,9 +24,6 @@ export default function Navbar() {
         <a className="NavButton" href="#internship">
           Internship
         </a>
-        <a className="PersonalCornerLink" href={personalPath}>
-          Personal corner
-        </a>
       </nav>
     </header>
   )
